@@ -34,6 +34,7 @@ unittests:
         - sudo chmod 600 /home/bootcamp/.kaggle/kaggle.json
         - sudo chown bootcamp:bootcamp /home/bootcamp/.kaggle/kaggle.json
         - make unittests
+        - sudo rm -rf /home/bootcamp/.kaggle/*
 
 build:
     stage: Building
