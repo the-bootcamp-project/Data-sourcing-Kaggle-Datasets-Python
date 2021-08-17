@@ -31,8 +31,8 @@ unittests:
     stage: Unit Testing
     script:
         - mkdir -p /home/bootcamp/.kaggle/ && touch /home/bootcamp/.kaggle/kaggle.json
-        - echo "${CI_KAGGLE_JSON}"
-        - echo "${CI_KAGGLE_JSON}" > /home/bootcamp/.kaggle/kaggle.json
+        - echo "$CI_KAGGLE_JSON"
+        - echo "$CI_KAGGLE_JSON" > /home/bootcamp/.kaggle/kaggle.json
         - cat /home/bootcamp/.kaggle/kaggle.json
         - make unittests
         - sudo rm -rf /home/bootcamp/.kaggle/*
