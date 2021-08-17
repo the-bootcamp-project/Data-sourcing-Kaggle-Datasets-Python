@@ -1,11 +1,7 @@
-image: "tbcp/python"
+image: "tbcp/datascience-python"
 
 before_script:
     - make init-requirements
-    - mkdir -p /home/bootcamp/.kaggle/ && touch /home/bootcamp/.kaggle/kaggle.json
-    - echo $CI_KAGGLE_JSON
-    - echo $CI_KAGGLE_JSON > /home/bootcamp/.kaggle/kaggle.json
-    - cat /home/bootcamp/.kaggle/kaggle.json
 
 stages:
     - Static Analysis
@@ -34,7 +30,11 @@ secure-code:
 unittests:
     stage: Unit Testing
     script:
+        - mkdir -p /home/bootcamp/.kaggle/ && touch /home/bootcamp/.kaggle/kaggle.json
+        - cp $CI_KAGGLE_JSON /home/bootcamp/.kaggle/kaggle.json
+        - cat /home/bootcamp/.kaggle/kaggle.json
         - make unittests
+        - sudo rm -rf /home/bootcamp/.kaggle/*
 
 build:
     stage: Building
@@ -70,6 +70,3 @@ docsify:
     artifacts:
         paths: [public]
         expire_in: 10 seconds
-
-after_script:
-    - sudo rm -rf /home/bootcamp/.kaggle/*
