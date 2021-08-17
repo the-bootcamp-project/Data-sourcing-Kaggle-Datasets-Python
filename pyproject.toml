@@ -12,19 +12,14 @@ init-hook="import os; import sys; sys.path.insert(0, os.path.abspath(os.path.joi
 
 [tool.pylint.messages_control]
 max-line-length = 180
-# disable = [
-#   "missing-docstring",
-#   "unused-argument",
-#   "no-value-for-parameter",
-#   "no-member",
-#   "no-else-return",
-#   "bad-whitespace",
-#   "bad-continuation",
-#   "line-too-long",
-#   "fixme",
-#   "protected-access",
-#   "too-few-public-methods",
-# ]
+disable = [
+  "no-name-in-module",
+  "import-error",
+  "inconsistent-return-statements",
+  "attribute-defined-outside-init",
+  "too-many-arguments",
+  "no-else-return"
+]
 
 [tool.pylint.design]
 # limiting the number of returns might discourage

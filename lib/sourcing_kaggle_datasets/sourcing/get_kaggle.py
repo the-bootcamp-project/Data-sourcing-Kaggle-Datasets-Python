@@ -10,16 +10,17 @@ from pathlib import Path
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 
-
 class Kaggle:
     """This script prompts a user to enter a message to encode or decode
         using a classic Caeser shift substitution (3 letter shift)"""
 
     def __init__(self):
 
-        kaggle_config = json.load(open('/home/bootcamp/.kaggle/kaggle.json', "r"))
-        os.environ['KAGGLE_USERNAME'] = kaggle_config["username"]
-        os.environ['KAGGLE_KEY'] = kaggle_config["key"]
+        kaggle_config = {}
+        with open('/home/bootcamp/.kaggle/kaggle.json', "r") as kaggle_json:
+            kaggle_config = json.load(kaggle_json)
+            os.environ['KAGGLE_USERNAME'] = kaggle_config["username"]
+            os.environ['KAGGLE_KEY'] = kaggle_config["key"]
 
         self.api = KaggleApi()
         self.api.authenticate()
@@ -36,32 +37,32 @@ class Kaggle:
         path:       if defined, download to this location
         """
 
-        split_ds = dataset.split("/")
-        owner = split_ds[0]
-        dataset_name = split_ds[1]
+        self.split_ds = dataset.split("/")
+        self.owner = self.split_ds[0]
+        self.dataset_name = self.split_ds[1]
 
-        path = re.sub('/$', '', path)
-        path = str(path + "/" + owner + "/" + dataset_name)
+        self.path = re.sub('/$', '', path)
+        self.path = str(self.path + "/" + self.owner + "/" + self.dataset_name)
 
-        filepath = Path(path)
-        filepath.parent.mkdir(parents=True, exist_ok=True)
+        self.filepath = Path(self.path)
+        self.filepath.parent.mkdir(parents=True, exist_ok=True)
 
-        return path
+        return self.path
 
     def parse_size(self, human_readable_size="0B"):
         """ This Methode convert human readable File Size to bytes.
         Usage: parse_size(human_readable_size="1337 MB")
         """
-        human_readable_size = human_readable_size.upper()
+        self.human_readable_size = human_readable_size.upper()
         units = {"B": 1, "KB": 2**10,
                  "MB": 2**20, "GB": 2**30, "TB": 2**40}
 
-        if not re.match(r' ', human_readable_size):
-            human_readable_size = re.sub(
-                r'([KMGT]?B)', r' \1', human_readable_size)
+        if not re.match(r' ', self.human_readable_size):
+            self.human_readable_size = re.sub(
+                r'([KMGT]?B)', r' \1', self.human_readable_size)
 
         number, unit = [string.strip()
-                        for string in human_readable_size.split()]
+                        for string in self.human_readable_size.split()]
 
         return int(float(number)*units[unit])
 
@@ -122,7 +123,8 @@ class Datasets(Kaggle):
 
         if isinstance(dataset_file_list, list):
             return [str(i) for i in dataset_file_list]
-        else:
+
+        if isinstance(dataset_file_list, dict):
             return []
 
     def get_dataset_files(self, dataset, path="."):
@@ -151,6 +153,8 @@ class Datasets(Kaggle):
                       for i in glob.iglob(path + '**/**', recursive=True)]
 
             return dl_lst
+        else:
+            return False
 
     def get_dataset_file(self, dataset, file_name, path="."):
         """ download a single file for a dataset
@@ -172,3 +176,5 @@ class Datasets(Kaggle):
                 str(dataset), str(file_name), str(path), True, True)
 
             return file_name
+        else:
+            return False

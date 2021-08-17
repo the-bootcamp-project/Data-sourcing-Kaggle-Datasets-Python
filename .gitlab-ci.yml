@@ -9,7 +9,6 @@ stages:
     - Building
     - Function Testing
     - Deployment
-    - Release
     - Documenting
 
 types:
@@ -34,6 +33,7 @@ unittests:
         - cp $CI_KAGGLE_JSON /home/bootcamp/.kaggle/kaggle.json
         - make unittests
         - sudo rm -rf /home/bootcamp/.kaggle/*
+    allow_failure: false
 
 build:
     stage: Building
@@ -44,7 +44,7 @@ build:
         - develop
         - main
 
-deploy-develop:
+gitlab:
     stage: Deployment
     script: [make deploy]
     artifacts:
@@ -53,15 +53,15 @@ deploy-develop:
         - develop
         - main
 
-deploy-release:
-    stage: Release
+pypi:
+    stage: Deployment
     script: [make release]
     artifacts:
         paths: [dist]
     only:
         - main
 
-docsify:
+docs:
     stage: Documenting
     script:
         - rm -rf public && mkdir public
@@ -69,3 +69,4 @@ docsify:
     artifacts:
         paths: [public]
         expire_in: 10 seconds
+    allow_failure: true

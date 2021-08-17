@@ -1,4 +1,4 @@
-FROM tbcp/python:latest
+FROM tbcp/datascience-python:latest
 
 USER bootcamp
 

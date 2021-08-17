@@ -34,7 +34,7 @@ unittests:
 	python3 -m pytest --version
 	python3 -m pytest
 
-build:
+build: | types
 	python3 setup.py sdist bdist_wheel
 
 deploy:
