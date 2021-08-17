@@ -3,7 +3,7 @@ import setuptools
 
 PACKAGE_NAME = "sourcing-kaggle-datasets"
 
-VERSION = "0.0.1"
+VERSION = "0.1.0"
 
 # The text of the README file
 README = (pathlib.Path(__file__).parent / "README.md").read_text()
@@ -47,7 +47,8 @@ setuptools.setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
-    packages=setuptools.find_packages(where="lib", include=["bin","tests"], exclude=["docs"]),
+    packages=setuptools.find_packages(
+        where="lib", include=["bin", "tests"], exclude=["docs"]),
     package_dir={"": "lib"},
     include_package_data=True,
     python_requires=">=3.5"
