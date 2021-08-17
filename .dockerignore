@@ -1,0 +1,12 @@
+.devcontainer
+.vscode
+.gitignore
+.gitlab-ci.yml
+
+**/README.md
+**/__pycache__
+**/.mypy_cache
+**/.pytest_cache
+
+build
+dist

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=45","wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+python_version = 3.6
+install-types = true
+non-interactive = true
+
+[tool.pylint.master]
+init-hook="import os; import sys; sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))"
+
+[tool.pylint.messages_control]
+max-line-length = 180
+# disable = [
+#   "missing-docstring",
+#   "unused-argument",
+#   "no-value-for-parameter",
+#   "no-member",
+#   "no-else-return",
+#   "bad-whitespace",
+#   "bad-continuation",
+#   "line-too-long",
+#   "fixme",
+#   "protected-access",
+#   "too-few-public-methods",
+# ]
+
+[tool.pylint.design]
+# limiting the number of returns might discourage
+# the use of guard clauses. So we increase the
+# allowed number of returns from 6 to 8
+max-returns = 8
+
+[tool.pytest.ini_options]
+testpaths = ["tests/unit"]

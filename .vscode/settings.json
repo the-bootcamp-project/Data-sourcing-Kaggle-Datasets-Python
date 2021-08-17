@@ -1,0 +1,36 @@
+{
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "markdownlint.config": {
+        "default": true,
+        "MD033": false,
+        "MD041": false
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.linting.banditEnabled": true,
+    "python.linting.banditArgs": [
+        "-c bandit.yml",
+        "-r lib/sourcing_kaggle_datasets"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "jupyter.allowImportFromNotebook": false,
+    "jupyter.allowInput": false,
+    "jupyter.enableCellCodeLens": false,
+    "jupyter.searchForJupyter": false,
+    "python.defaultInterpreterPath": "python3",
+    "python.globalModuleInstallation": true,
+    "python.pythonPath": "/usr/bin/python3"
+}
