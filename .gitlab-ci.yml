@@ -30,6 +30,8 @@ secure-code:
 unittests:
     stage: Unit Testing
     script:
+        - mkdir -p /home/bootcamp/.kaggle/
+        - touch /home/bootcamp/.kaggle/kaggle.json
         - echo ${CI_KAGGLE_JSON} > /home/bootcamp/.kaggle/kaggle.json
         - sudo chmod 600 /home/bootcamp/.kaggle/kaggle.json
         - sudo chown bootcamp:bootcamp /home/bootcamp/.kaggle/kaggle.json
