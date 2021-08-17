@@ -26,11 +26,11 @@ lint:
 	python3 -m pylint --version
 	python3 -m pylint lib/$(package)
 
-check-secure-code:
+sast:
 	python3 -m bandit --version
 	python3 -m bandit -r lib/$(package) -c bandit.yml
 
-unit-test:
+unittests:
 	python3 -m pytest --version
 	python3 -m pytest
 

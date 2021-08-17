@@ -1,67 +1,71 @@
 image: "tbcp/python"
 
 before_script:
-  - make init-requirements
+    - make init-requirements
 
 stages:
-  - Static Analysis
-  - Unit Testing
-  - Building
-  - Function Testing
-  - Deployment
-  - Release
-  - Documenting
+    - Static Analysis
+    - Unit Testing
+    - Building
+    - Function Testing
+    - Deployment
+    - Release
+    - Documenting
 
 types:
-  stage: Static Analysis
-  script: [make types]
-  allow_failure: true
+    stage: Static Analysis
+    script: [make types]
+    allow_failure: true
 
 linting:
-  stage: Static Analysis
-  script: [make lint]
-  allow_failure: true
+    stage: Static Analysis
+    script: [make lint]
+    allow_failure: true
 
 secure-code:
-  stage: Static Analysis
-  script: [make check-secure-code]
-  allow_failure: false
+    stage: Static Analysis
+    script: [make sast]
+    allow_failure: false
 
-unit-test:
-  stage: Unit Testing
-  script: [make unit-test]
+unittests:
+    stage: Unit Testing
+    script:
+        - echo ${CI_KAGGLE_JSON} > /home/bootcamp/.kaggle/kaggle.json
+        - sudo chmod 600 /home/bootcamp/.kaggle/kaggle.json
+        - sudo chown bootcamp:bootcamp /home/bootcamp/.kaggle/kaggle.json
+        - make unittests
 
 build:
-  stage: Building
-  script: [make build]
-  artifacts:
-    paths: [dist]
-  only:
-    - develop
-    - main
+    stage: Building
+    script: [make build]
+    artifacts:
+        paths: [dist]
+    only:
+        - develop
+        - main
 
 deploy-develop:
-  stage: Deployment
-  script: [make deploy]
-  artifacts:
-    paths: [dist]
-  only:
-    - develop
-    - main
+    stage: Deployment
+    script: [make deploy]
+    artifacts:
+        paths: [dist]
+    only:
+        - develop
+        - main
 
 deploy-release:
-  stage: Release
-  script: [make release]
-  artifacts:
-    paths: [dist]
-  only:
-    - main
+    stage: Release
+    script: [make release]
+    artifacts:
+        paths: [dist]
+    only:
+        - main
 
 docsify:
-  stage: Documenting
-  script:
-    - rm -rf public && mkdir public
-    - cp -r docs/* public/ && cp -r README.md public/_media/
-  artifacts:
-    paths: [public]
-    expire_in: 10 seconds
+    stage: Documenting
+    script:
+        - rm -rf public && mkdir public
+        - cp -r docs/* public/ && cp -r README.md public/_media/
+    artifacts:
+        paths: [public]
+        expire_in: 10 seconds
