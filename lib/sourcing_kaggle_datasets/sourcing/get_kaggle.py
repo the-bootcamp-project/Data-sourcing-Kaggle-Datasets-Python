@@ -2,10 +2,13 @@
 """This script prompts a user to enter a message to encode or decode
     using a classic Caeser shift substitution (3 letter shift)"""
 
+import re
+import os
+import json
 import glob
 from pathlib import Path
-import re
 from kaggle.api.kaggle_api_extended import KaggleApi
+
 
 
 class Kaggle:
@@ -13,6 +16,11 @@ class Kaggle:
         using a classic Caeser shift substitution (3 letter shift)"""
 
     def __init__(self):
+
+        kaggle_config = json.load(open('/home/bootcamp/.kaggle/kaggle.json', "r"))
+        os.environ['KAGGLE_USERNAME'] = kaggle_config["username"]
+        os.environ['KAGGLE_KEY'] = kaggle_config["key"]
+
         self.api = KaggleApi()
         self.api.authenticate()
 

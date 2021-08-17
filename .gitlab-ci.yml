@@ -32,7 +32,6 @@ unittests:
     script:
         - mkdir -p /home/bootcamp/.kaggle/ && touch /home/bootcamp/.kaggle/kaggle.json
         - cp $CI_KAGGLE_JSON /home/bootcamp/.kaggle/kaggle.json
-        - cat /home/bootcamp/.kaggle/kaggle.json
         - make unittests
         - sudo rm -rf /home/bootcamp/.kaggle/*
 
