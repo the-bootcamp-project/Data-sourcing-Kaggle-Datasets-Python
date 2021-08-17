@@ -6,4 +6,6 @@ data/*
 build
 dist
 
+# Project specific
+
 kaggle.json

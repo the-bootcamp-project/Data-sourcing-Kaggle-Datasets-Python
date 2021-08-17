@@ -28,11 +28,7 @@ secure-code:
 
 unittests:
     stage: Unit Testing
-    script:
-        - mkdir -p /home/bootcamp/.kaggle/ && touch /home/bootcamp/.kaggle/kaggle.json
-        - cp $CI_KAGGLE_JSON /home/bootcamp/.kaggle/kaggle.json
-        - make unittests
-        - sudo rm -rf /home/bootcamp/.kaggle/*
+    script: [make unittests]
     allow_failure: false
 
 build:

@@ -1,0 +1,38 @@
+{
+    "PROJECT_TITLE": "Data sourcing Kaggle Datasets Python",
+    "PACKAGE_NAME_PYPI": "sourcing-kaggle-datasets",
+    "REPOSITORY_AUTHOR": "Bootcamp contributors",
+    "REPOSITORY_AUTHOR_EMAIL": "contributors@bootcamp-project.com",
+    "PACKAGE_KEYWORDS": "Data sourcing Kaggle Datasets Python",
+    "PROJECT_URL": "https://gitlab.com/the-bootcamp-project/packages/data-science/sourcing-kaggle-datasets-python",
+    "PROJECT_URLS": {
+        "Documentation": "https://python.rtfm.page",
+        "Repository": "https://gitlab.com/the-bootcamp-project/packages/data-science/sourcing-kaggle-datasets-python.git",
+        "Bug Tracker": "https://gitlab.com/the-bootcamp-project/packages/data-science/sourcing-kaggle-datasets-python/-/issues",
+        "Docker Hub": "https://hub.docker.com/u/tbcp",
+        "Read More...": "https://bootcamp-project.com/"
+    },
+    "PROJECT_CLASSIFIERS": [
+        "Development Status :: 3 - Alpha",
+        "Topic :: Internet",
+        "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Scientific/Engineering :: Information Analysis",
+        "Topic :: Text Editors",
+        "Topic :: Text Editors :: Text Processing",
+        "Topic :: Text Editors :: Word Processors",
+        "Topic :: Text Processing",
+        "Topic :: Text Processing :: Filters",
+        "Topic :: Text Processing :: General",
+        "Topic :: Text Processing :: Indexing",
+        "Topic :: Text Processing :: Linguistic",
+        "Topic :: Utilities",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9"
+    ]
+}

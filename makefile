@@ -31,8 +31,11 @@ sast:
 	python3 -m bandit -r lib/$(package) -c bandit.yml
 
 unittests:
+	mkdir -p /home/bootcamp/.kaggle/ && touch /home/bootcamp/.kaggle/kaggle.json
+	cp ${CI_KAGGLE_JSON} /home/bootcamp/.kaggle/kaggle.json
 	python3 -m pytest --version
 	python3 -m pytest
+	sudo rm -rf /home/bootcamp/.kaggle/*
 
 build: | types
 	python3 setup.py sdist bdist_wheel
