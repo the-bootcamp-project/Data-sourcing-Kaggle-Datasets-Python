@@ -1,4 +1,4 @@
-FROM tbcp/datascience-python:latest
+FROM tbcp/datascience-python:debian
 
 USER bootcamp
 
