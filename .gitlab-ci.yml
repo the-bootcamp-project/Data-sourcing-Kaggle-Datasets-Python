@@ -1,4 +1,4 @@
-image: "tbcp/datascience-python"
+image: "tbcp/datascience-python:debian"
 
 before_script:
     - make init-requirements
