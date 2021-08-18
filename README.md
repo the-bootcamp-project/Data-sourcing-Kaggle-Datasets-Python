@@ -1,6 +1,6 @@
 <a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" align="right" height="200" /></a>
 
-<h1 align="center">Data sourcing Kaggle Datasets Python</h1>
+<h1 align="center">Sourcing Kaggle Datasets with Python</h1>
 
 <div align="center">
 ![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg?style=for-the-badge)
@@ -10,7 +10,7 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sourcing-kaggle-datasets?style=for-the-badge)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/sourcing-kaggle-datasets?style=for-the-badge)
 ![PyPI - License](https://img.shields.io/pypi/l/sourcing-kaggle-datasets?style=for-the-badge)
-![Bootcamp Project: Data sourcing Kaggle Datasets Python](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
+![Bootcamp Project: Sourcing Kaggle Datasets with Python](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
 </div>
 
 ## 👉 About 👈
@@ -22,7 +22,7 @@
 - [pytest-dev/pytest](https://github.com/pytest-dev/pytest/)
 - [PyCQA/pylint](https://github.com/PyCQA/pylint)
 - [PyCQA/bandit](https://github.com/PyCQA/bandit)
--
+
 ## 📖 Getting Started 📖
 
 ### ✋ Prerequisites ✋
@@ -131,7 +131,7 @@ pypi:
         - main
 ```
 
-_For more examples, please refer to the [Documentation](https://python.rtfm.page)_
+_For more examples, please refer to the [Documentation](https://sourcing-kaggle-datasets-python.rtfm.page)_
 
 ## ⭐️ Features ⭐️
 
@@ -170,6 +170,6 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ## 🏆 Acknowledgements 🏆
 
-Thanks for these awesome resources that were used during the development of the **Bootcamp Project: Data sourcing Kaggle Datasets Python**:
+Thanks for these awesome resources that were used during the development of the **Bootcamp Project: Sourcing Kaggle Datasets with Python**:
 
 - [Kaggle API – The Missing Python Documentation](https://technowhisp.com/kaggle-api-python-documentation/)

@@ -1,3 +1,3 @@
-![How to DataSourcing with Python](https://ops.rtfm.page/_media/mindmap_topics.svg)
+![How to Sourcing Kaggle Datasets with Python](https://sourcing-kaggle-datasets-python.rtfm.page/_media/mindmap_topics.svg)
 
-# How to DataSourcing with Python
+# How to Sourcing Kaggle Datasets with Python

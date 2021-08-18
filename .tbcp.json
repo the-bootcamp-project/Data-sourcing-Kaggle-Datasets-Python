@@ -1,12 +1,12 @@
 {
-    "PROJECT_TITLE": "Data sourcing Kaggle Datasets Python",
+    "PROJECT_TITLE": "Sourcing Kaggle Datasets with Python",
     "PACKAGE_NAME_PYPI": "sourcing-kaggle-datasets",
     "REPOSITORY_AUTHOR": "Bootcamp contributors",
     "REPOSITORY_AUTHOR_EMAIL": "contributors@bootcamp-project.com",
     "PACKAGE_KEYWORDS": "Data sourcing Kaggle Datasets Python",
     "PROJECT_URL": "https://gitlab.com/the-bootcamp-project/packages/data-science/sourcing-kaggle-datasets-python",
     "PROJECT_URLS": {
-        "Documentation": "https://python.rtfm.page",
+        "Documentation": "https://sourcing-kaggle-datasets-python.rtfm.page",
         "Repository": "https://gitlab.com/the-bootcamp-project/packages/data-science/sourcing-kaggle-datasets-python.git",
         "Bug Tracker": "https://gitlab.com/the-bootcamp-project/packages/data-science/sourcing-kaggle-datasets-python/-/issues",
         "Docker Hub": "https://hub.docker.com/u/tbcp",
