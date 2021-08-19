@@ -3,14 +3,14 @@
 <h1 align="center">Sourcing Kaggle Datasets with Python</h1>
 
 <div align="center">
-![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg?style=for-the-badge)
-![PyPI](https://img.shields.io/pypi/v/sourcing-kaggle-datasets?style=for-the-badge)
-![PyPI - Status](https://img.shields.io/pypi/status/sourcing-kaggle-datasets?style=for-the-badge)
-![PyPI - Implementation](https://img.shields.io/pypi/implementation/sourcing-kaggle-datasets?style=for-the-badge)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sourcing-kaggle-datasets?style=for-the-badge)
-![PyPI - Wheel](https://img.shields.io/pypi/wheel/sourcing-kaggle-datasets?style=for-the-badge)
-![PyPI - License](https://img.shields.io/pypi/l/sourcing-kaggle-datasets?style=for-the-badge)
-![Bootcamp Project: Sourcing Kaggle Datasets with Python](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
+<img src="https://img.shields.io/badge/security-bandit-yellow.svg?style=for-the-badge"></img>
+<img src="https://img.shields.io/pypi/v/sourcing-kaggle-datasets?style=for-the-badge"></img>
+<img src="https://img.shields.io/pypi/status/sourcing-kaggle-datasets?style=for-the-badge"></img>
+<img src="https://img.shields.io/pypi/implementation/sourcing-kaggle-datasets?style=for-the-badge"></img>
+<img src="https://img.shields.io/pypi/pyversions/sourcing-kaggle-datasets?style=for-the-badge"></img>
+<img src="https://img.shields.io/pypi/wheel/sourcing-kaggle-datasets?style=for-the-badge"></img>
+<img src="https://img.shields.io/pypi/l/sourcing-kaggle-datasets?style=for-the-badge"></img>
+<img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge"></img>
 </div>
 
 ## 👉 About 👈
